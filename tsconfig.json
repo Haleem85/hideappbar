@@ -1,0 +1,23 @@
+﻿{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"target": "es5",
+		"jsx": "react",
+		"module": "ESNext",
+		"declaration": true,
+		"declarationDir": "types",
+		"sourceMap": true,
+		"outDir": "dist",
+		"moduleResolution": "node",
+		"emitDeclarationOnly": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true
+	},
+	"include": ["src/**/*.ts*"],
+	"exclude": ["dist", "node_modules", "storybook"]
+}
