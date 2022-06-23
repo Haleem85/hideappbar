@@ -1,7 +1,20 @@
-# [How to build a React custom component library with Theme UI](https://blog.logrocket.com/build-react-custom-component-library-theme-ui/)
+# hideappbar
+
+This repository is a [node](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiLxfOkxsT4AhVR6LsIHTqCDToQFnoECBMQAQ&url=https%3A%2F%2Fnodejs.org%2F&usg=AOvVaw1tY2p-vJFWJmxWlq4sTxCn) and got developed as practical activity for the tutorial entitled [How to build a React custom component library with Theme UI](https://blog.logrocket.com/build-react-custom-component-library-theme-ui/)
+
+The package has been named hideappbar , this name was made randomly as I considered building this package for only self-learning try and it is a good idea to document its result in a public repository.
+
+## Install hideappbar package
+
+```
+npm i hideappbar
+```
+
+# Tutorial
+
+## [How to build a React custom component library with Theme UI](https://blog.logrocket.com/build-react-custom-component-library-theme-ui/)
 
 ===========================================================
-
 
 React is a JavaScript toolkit that facilitates the creation of beautiful user interfaces for both online and mobile apps. It easily interfaces with other JavaScript frameworks and libraries and has short, reusable components.
 
@@ -29,18 +42,22 @@ mkdir themecomponentui && cd themecomponentui
 
 Next, we’ll initialize a new React project using the `npm init` command to create a `package.json` file. Then, we’ll install React and TypeScript with the following command:
 
+```
 npm i \-D react @types/react typescript
+```
 
 The `-D` flag in the above command denotes that the modules should be installed as `devDependencies` because we’ll need them during our build process.
 
 With React and TypeScript installed, let’s organize our project according to the below folder structure:
-```
-![📦](https://s.w.org/images/core/emoji/14.0.0/svg/1f4e6.svg)themecomponentui  
-┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)src  
-┃ ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)components  
-┃ ┃ ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)Button  
+
+```git
+![📦](https://s.w.org/images/core/emoji/14.0.0/svg/1f4e6.svg)themecomponentui
+┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)src
+┃ ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)components
+┃ ┃ ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)Button
 ┃ ┃ ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)Input
 ```
+
 We made a custom demo for .  
 No really. Click here to check it out.
 
@@ -48,7 +65,63 @@ No really. Click here to check it out.
 
 Click here to see the full demo with network requests
 
-.inline-demo {width: 100%; max-width:700px;display:none;margin-bottom: 2rem;transition: filter 0.5s ease;padding: 1.5rem;border-radius: 5px;filter: drop-shadow(5px 0px 15px #afafaf); background: linear-gradient(-45deg, #764abc, #7a49a5, #4974a5,#4A4A4A); background-size: 400% 400%; animation: gradient 10s ease infinite;} .inline-demo:hover{filter:drop-shadow(1px 0px 5px #d7d7d7) !important;}@keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }#blog-personalized-demo-link:hover{text-decoration:none;} .personalize-button {background: #4ABC76; width: 35%; border-radius: 25px; text-decoration: none; color: #fff; line-height: 18px; display: block; margin: 20px auto 5px auto; border:0px; padding: 20px; letter-spacing: 0.1px; box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.3); transition: all 0.25s linear;} .personalize-button:hover{ color: #4ABC76; background: #fff !important; cursor:pointer; }@media all and (max-width: 600px){.personalize-button{width: 80%;}}
+```css
+.inline-demo {
+	width: 100%;
+	max-width: 700px;
+	display: none;
+	margin-bottom: 2rem;
+	transition: filter 0.5s ease;
+	padding: 1.5rem;
+	border-radius: 5px;
+	filter: drop-shadow(5px 0px 15px #afafaf);
+	background: linear-gradient(-45deg, #764abc, #7a49a5, #4974a5, #4a4a4a);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+.inline-demo:hover {
+	filter: drop-shadow(1px 0px 5px #d7d7d7) !important;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#blog-personalized-demo-link:hover {
+	text-decoration: none;
+}
+.personalize-button {
+	background: #4abc76;
+	width: 35%;
+	border-radius: 25px;
+	text-decoration: none;
+	color: #fff;
+	line-height: 18px;
+	display: block;
+	margin: 20px auto 5px auto;
+	border: 0px;
+	padding: 20px;
+	letter-spacing: 0.1px;
+	box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
+	transition: all 0.25s linear;
+}
+.personalize-button:hover {
+	color: #4abc76;
+	background: #fff !important;
+	cursor: pointer;
+}
+@media all and (max-width: 600px) {
+	.personalize-button {
+		width: 80%;
+	}
+}
+```
 
 Now, let’s configure TypeScript for our project.
 
@@ -58,10 +131,13 @@ We’ll use TypeScript to build the components that will enable us to use the li
 
 First, we’ll configure TypeScript by creating a `tsconfig.json` file using the following command:
 
+```js
 npx tsc \--init
+```
 
 Then, we’ll update the `tsconfig.json` file with the following snippet:
 
+```js
 {
 "compilerOptions": {
 "esModuleInterop": true,
@@ -83,17 +159,18 @@ Then, we’ll update the `tsconfig.json` file with the following snippet:
 "node_modules",
 \],
 }
+```
 
 In the above code, we added the following configurations:
 
--   `"jsx": "react"`: Transforms JSX code into React code
--   `"skipLibCheck": true`: Skips type checking the declaration files
+-   `"jsx": "react"`: Transforms JSX code into React code .
+-   `"skipLibCheck": true`: Skips type checking the declaration files .
 -   `"module": "ESNext"`: Generates Modern JavaScript modules for our library (ES6 or higher)
 -   `"declarationDir": "types"`: Sets up a directory for the .d.ts files
--   `"sourceMap": true`: Enables mapping of JavaScript code back to its TypeScript file origins for debugging
--   `"outDir": "dist"`: Sets up the directory for project build
--   `"moduleResolution": "node"`: Follows Node.js rules for finding modules
--   `"emitDeclarationOnly": true`: Allows Rollup to generate JavaScript export type declarations
+-   `"sourceMap": true`: Enables mapping of JavaScript code back to its TypeScript file origins for debugging .
+-   `"outDir": "dist"`: Sets up the directory for project build .
+-   `"moduleResolution": "node"`: Follows Node.js rules for finding modules .
+-   `"emitDeclarationOnly": true`: Allows Rollup to generate JavaScript export type declarations .
 
 Now that TypeScript is configured, let’s move on to configuring Rollup.
 
@@ -103,7 +180,9 @@ Now that TypeScript is configured, let’s move on to configuring Rollup.
 
 To get started with Rollup, we’ll install it using the following command:
 
+```js
 npm i \-D rollup
+```
 
 In the above code, we added the `-D` flag to the Rollup installation command to add it to our `devDependencies`. Once the installation is completed, we’ll also install the following Rollup plugins:
 
@@ -116,10 +195,13 @@ In the above code, we added the `-D` flag to the Rollup installation command to 
 
 We’ll run the following command to install the plugins:
 
+```js
 npm i \-D @rollup/plugin\-node\-resolve @rollup/plugin\-commonjs @rollup/plugin\-typescript rollup\-plugin\-peer\-deps\-external rollup\-plugin\-terser rollup\-plugin\-dts
+```
 
 When the installation is complete, we’ll configure Rollup by creating a `rollup.config.js` file in the project root directory using the following snippets:
 
+```js
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
@@ -158,28 +240,35 @@ output: \[{ file: "dist/index.d.ts", format: "esm" }\],
 plugins: \[dts()\],
 },
 \];
+```
 
 In the above code, we configured CommonJS and ES modules to handle the project build process. This will enable us to use named export and tree shaking. It also provides enhanced static analysis, browser support, and compatibility with other JavaScript versions.
 
 Next, we need to specify the path to the CommonJS files and ES modules in the `package.json` file. We’ll open the `package.json` file and add the following snippet configurations:
 
+```js
 "main": "dist/cjs/index.js",
 "module": "dist/esm/index.js",
+```
 
 Finally, we’ll add the build command inside the `scripts` object:
 
+```json
 ...
 "scripts": {
 ...
 "build": "rollup -c"
 },
 ...
+```
 
 ## Creating custom components
 
 Now, let’s create our custom components. First, we’ll install Theme UI:
 
+```js
 npm install \-D theme\-ui @emotion/react @emotion/styled @mdx\-js/react
+```
 
 Theme UI is a flexible API framework, so we can choose to use a library of primitive UI components or use the [`sx` prop](https://theme-ui.com/sx-prop/). For the demonstration purpose of this tutorial, we’ll use the `sx` prop.
 
@@ -189,6 +278,7 @@ Next, let’s create the button component. We’ll create `Button.tsx` and `inde
 
 Open the `Button.tsx` file and add the following snippets:
 
+```js
 /\*\* @jsxImportSource theme-ui \*/
 import \* as React from "react";
 import { MouseEventHandler } from "react";
@@ -204,6 +294,7 @@ const Button \= (props: ButtonProps) \=> {
 return <button onClick\={props.onClick} sx\={{ color: props.color, fontFamily: props.fontFamily }}>{props.label}</button\>;
 };
 export default Button;
+```
 
 In the above code, we added the `/** @jsxImportSource theme-ui */` comment to the top of the file to enable the Theme UI `sx` props.
 
@@ -215,7 +306,9 @@ Next, we created the `Button` component and set the styling using Theme UI’s `
 
 Now, let’s export the `Button` component in the `index.ts` file using the following snippet:
 
-export { default } from './Button'
+```js
+export { default } from "./Button";
+```
 
 ## Creating the `Input` component
 
@@ -223,6 +316,7 @@ We’ll create the `Input` component by creating `Input.tsx` and `index.ts` file
 
 Open the `Input.tsx` file, and add the following snippet:
 
+```js
 /\*\* @jsxImportSource theme-ui \*/
 import \* as React from "react";
 import { ChangeEventHandler } from "react"
@@ -246,6 +340,7 @@ return (
 );
 };
 export default Input;
+```
 
 In the above code, we added the `/** @jsxImportSource theme-ui */` comment at the start of the file to use the Theme UI’s `sx` prop to style the component.
 
@@ -255,16 +350,22 @@ We created the `Input` component, which takes in `props` that match the `InputPr
 
 Now, let’s export the `Input` component in the `index.ts` file using the following command:
 
-export { default } from './Input'
+```js
+export { default } from "./Input";
+```
 
 We’ll create an `index.ts` file in the `src/components` folder, and export the components like so:
 
-export { default as Button } from './Button';
-export { default as Input } from './Input'
+```js
+export { default as Button } from "./Button";
+export { default as Input } from "./Input";
+```
 
 Now, we’ll build the project:
 
+```js
 npm run build
+```
 
 The above command will create a `dist` folder in the project root directory.
 
@@ -274,7 +375,9 @@ The next step is to publish our newly created components to npm so that we can u
 
 To get started, log into your npm account:
 
+```js
 npm login
+```
 
 If you don’t have an account, you can [sign up for an npm account here](https://www.npmjs.com).
 
@@ -282,7 +385,9 @@ After logging in, enter your account credentials to get authenticated. An OTP co
 
 Now, publish your package by running the following command:
 
+```js
 npm publish \--access public
+```
 
 You’ve successfully published a React custom component library to npm!
 
@@ -291,9 +396,3 @@ You’ve successfully published a React custom component library to npm!
 In this tutorial, we introduced the Theme UI library and demonstrated how to use Theme UI to build a custom React component library. We also demonstrated how to configure TypeScript and Rollup for the project build and how to publish a custom library to npm. You can extend this tutorial by creating more components with Theme UI, such as forms, boxes, and grids.
 
 Thanks for reading. Please feel free to share and comment below.
-
-## Links
-
--   [How to build a React custom component library with Theme UI](https://blog.logrocket.com/build-react-custom-component-library-theme-ui/)
-
--   [Build a component library with React and TypeScript](https://blog.logrocket.com/build-component-library-react-typescript/)
