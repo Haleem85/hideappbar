@@ -6,11 +6,52 @@ The package has been named hideappbar , this name was made randomly as I conside
 
 ## Install hideappbar package
 
-```
+```js
 npm i hideappbar
 ```
 
-# Tutorial
+## hideappbar
+
+### HideAppBar use
+
+Once installing finished go to your Bar component file import `HideAppBar`,`HideOnScroll`,`Button` and `Input` from `hideappbar` and insert them in your component.
+
+```js
+
+            import {HideAppBar, HideOnScroll, Button ,Input} from "hideappbar";
+
+    const App =()=>{
+    ...
+
+return (
+
+ <!-- To insert custom menu items in navbar -->
+
+<HideOnScroll>
+
+<!-- <{children elements}> -->
+
+</HideOnScroll>
+
+ <!-- to use default navbar  -->
+
+ <HideAppBar />
+
+ <!-- use input -->
+
+<Input id="myInput" disabled ={false} label="submit" message="message text" error={true} success={true}
+onChange="<{onChangeAction}>" placeholder="Type username"/>
+
+<!-- use Button -->
+
+<Button size="medium" primary={true} disabled={false} onClick="onClickAction"
+/>
+...
+)
+
+```
+
+================================================================================================
 
 ## [How to build a React custom component library with Theme UI](https://blog.logrocket.com/build-react-custom-component-library-theme-ui/)
 
@@ -42,8 +83,9 @@ mkdir themecomponentui && cd themecomponentui
 
 Next, we’ll initialize a new React project using the `npm init` command to create a `package.json` file. Then, we’ll install React and TypeScript with the following command:
 
-```
+```js
 npm i \-D react @types/react typescript
+
 ```
 
 The `-D` flag in the above command denotes that the modules should be installed as `devDependencies` because we’ll need them during our build process.
@@ -396,3 +438,5 @@ You’ve successfully published a React custom component library to npm!
 In this tutorial, we introduced the Theme UI library and demonstrated how to use Theme UI to build a custom React component library. We also demonstrated how to configure TypeScript and Rollup for the project build and how to publish a custom library to npm. You can extend this tutorial by creating more components with Theme UI, such as forms, boxes, and grids.
 
 Thanks for reading. Please feel free to share and comment below.
+
+================================================================================================
