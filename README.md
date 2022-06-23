@@ -17,37 +17,37 @@ npm i hideappbar
 Once installing finished go to your Bar component file import `HideAppBar`,`HideOnScroll`,`Button` and `Input` from `hideappbar` and insert them in your component.
 
 ```js
+import {HideAppBar, HideOnScroll, Button ,Input} from "hideappbar";
 
-            import {HideAppBar, HideOnScroll, Button ,Input} from "hideappbar";
+const App =()=>{
+       ...
 
-    const App =()=>{
-    ...
+   return (
 
-return (
+    <!-- To insert custom menu items in navbar -->
 
- <!-- To insert custom menu items in navbar -->
+   <HideOnScroll>
 
-<HideOnScroll>
+   <!-- <{children elements}> -->
 
-<!-- <{children elements}> -->
+   </HideOnScroll>
 
-</HideOnScroll>
+    <!-- to use default navbar  -->
 
- <!-- to use default navbar  -->
+    <HideAppBar />
 
- <HideAppBar />
+    <!-- use input -->
 
- <!-- use input -->
+   <Input id="myInput" disabled ={false} label="submit" message="message text" error={true} success={true}
+   onChange="<{onChangeAction}>" placeholder="Type username"/>
 
-<Input id="myInput" disabled ={false} label="submit" message="message text" error={true} success={true}
-onChange="<{onChangeAction}>" placeholder="Type username"/>
+   <!-- use Button -->
 
-<!-- use Button -->
-
-<Button size="medium" primary={true} disabled={false} onClick="onClickAction"
-/>
-...
-)
+   <Button size="medium" primary={true} disabled={false} onClick="onClickAction"
+   />
+   ...
+   )
+};
 
 ```
 
