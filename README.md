@@ -34,13 +34,13 @@ npm i \-D react @types/react typescript
 The `-D` flag in the above command denotes that the modules should be installed as `devDependencies` because we’ll need them during our build process.
 
 With React and TypeScript installed, let’s organize our project according to the below folder structure:
-
+```
 ![📦](https://s.w.org/images/core/emoji/14.0.0/svg/1f4e6.svg)themecomponentui  
 ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)src  
 ┃ ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)components  
 ┃ ┃ ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)Button  
 ┃ ┃ ┣ ![📂](https://s.w.org/images/core/emoji/14.0.0/svg/1f4c2.svg)Input
-
+```
 We made a custom demo for .  
 No really. Click here to check it out.
 
